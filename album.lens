@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif<]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="{{ site.description }}" />
+	<meta name="author" content="{{ site.title }}" />
+	<meta name="keywords" content="{{ site.keywords }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>{{ site.description }}</title>
+	
+
+	<koken:asset file="reset.css" common="true" />
+	
+
+	<koken:settings />
+
+</head>
+
+<body>
+	<div id="container">
+		<header class="top">
+			<div class="text">
+				<koken:link to="front"><img src="{{ settings.site_title_img_url }}" alt="{{ site.title }}" class="custom_logo"></koken:link>
+			</div>
+            <nav>
+                <koken:navigation />
+            </nav>
+		</header>
+
+<koken:load>
+<div class="grid">
+  
+    <koken:loop>
+      
+          <koken:img />
+    
+    </koken:loop>
+  
+<koken:else>
+  <koken:note>
+    No album data found 
+  </koken:note>
+</div>
+
+</koken:load>
+
+<footer>
+  {{ site.copyright }} 
+</footer>
+</div>
+
+<link rel="stylesheet" type="" href="jquery.justified.images.css">
+<script src="jquery.justified.images.js"></script>
+<script type="text/javascript">
+$(function() {
+    var images = $('#image>img');
+    var urls = []
+    
+    images.map(function(index,element){
+        urls.push(images.eq(index).attr("src"));
+    })
+    showPhotos(urls);
+    var showPhotos = function(photos){
+        console.log("URLS",photos);
+    $('.grid').empty().justifiedImages({
+        images : photos,
+        rowHeight: 200,
+        maxRowHeight: 400,
+        thumbnailPath: function(photo, width, height){
+            var purl = photo.url_s;
+            if( photo.url_n && (width > photo.width_s * 1.2 || height > photo.height_s * 1.2) ) purl = photo.url_n;
+            if( photo.url_m && (width > photo.width_n * 1.2 || height > photo.height_n * 1.2) ) purl = photo.url_m;
+            if( photo.url_z && (width > photo.width_m * 1.2 || height > photo.height_m * 1.2) ) purl = photo.url_z;
+            if( photo.url_l && (width > photo.width_z * 1.2 || height > photo.height_z * 1.2) ) purl = photo.url_l;
+            return purl;
+        },
+        getSize: function(photo){
+            return {width: photo.width_s, height: photo.height_s};
+        },
+        margin: 1
+    });
+    }
+})
+	
+		
+</script>
+</body>
+</html>
