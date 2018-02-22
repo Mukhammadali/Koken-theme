@@ -1,0 +1,11 @@
+<koken:include file="layouts/header.html" />
+
+<koken:load>
+
+	<article>
+		{{ page.content }}
+	</article>
+
+</koken:load>
+
+<koken:include file="layouts/footer.html" />

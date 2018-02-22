@@ -2,13 +2,10 @@
 	"name": "NdM",
 	"version": "1.0",
 	"description": "Simple, elegant theme with integrated font.",
-	"demo": "",
 	"author": {
-		"name": "Muhammad Ali",
-		"link": "https://github.com/Mukhammadali"
+		"name": "Justin Neven Du Mont",
+		"link": "http://www.jlcndm.com"
 	},
-	"koken_version_required": "0.8.0-beta.1",
-
 	"styles": {
 		"white": {
 			"label": "White",
@@ -22,20 +19,6 @@
 				"nav_link_color": "#808080",
 				"nav_link_hover_color": "#000",
 				"current_color": "#000"
-			}
-		},
-		"black": {
-			"label": "Black",
-			"variables": {
-				"background_color": "#000",
-				"title_color": "#ccc",
-				"body_color": "#666",
-				"header_color": "#ccc",
-				"link_color": "#ccc",
-				"link_hover_color": "#fff",
-				"nav_link_color": "#666",
-				"nav_link_hover_color": "#ccc",
-				"current_color": "#ccc"
 			}
 		}
 	},
@@ -54,6 +37,7 @@
 				}
 			}
 		},
+
 		"Dimensions": {
 			"icon": "dimensions",
 			"settings": {
@@ -106,78 +90,16 @@
 					"step":10,
 					"suffix":"px",
 					"scope": [ "content" ]
-				}
-				
-			}
-		},
-		"Layout": {
-			"icon": "layout",
-			"settings": {
-				"contents_layout": {
-					"label": "Contents layout",
-					"type": "select",
-					"options": [
-						{ "label":"List", "value": "list" },
-						{ "label":"Grid", "value": "grid" }
-					],
-					"value": "grid",
-					"scope": [ "contents" ]
 				},
-				"album_layout": {
-					"label": "Album layout",
-					"type": "select",
-					"options": [
-						{ "label":"Grid", "value": "grid" }
-					],
-					"value": "grid",
-					"scope": [ "album" ]
-				},
-				"grid_img_w": {
-					"label": "Grid image width",
-					"type": "slider",
-					"min": 80,
-					"max": 400,
-					"value": 210,
-					"step": 1,
-					"suffix": "px",
-					"scope": [ "album" ],
-					"dependencies": {
-	                    "evaluate": "any",
-	                    "conditions": [
-	                         {
-	                              "option": "album_layout",
-	                              "equals": "grid"
-	                         },
-	                         {
-	                              "option": "contents_layout",
-	                              "equals": "grid"
-	                         }
-	                    ]
-	               	}
-				},
-				"grid_img_off": {
-					"label": "Grid offset",
-					"type": "slider",
-					"min": 1,
-					"max": 40,
-					"value": 20,
-					"step": 1,
-					"suffix": "px",
-					"note": "Refresh preview to see width edits",
-					"scope": [ "album" ],
-					"dependencies": {
-	                    "evaluate": "any",
-	                    "conditions": [
-	                         {
-	                              "option": "album_layout",
-	                              "equals": "grid"
-	                         },
-	                         {
-	                              "option": "contents_layout",
-	                              "equals": "grid"
-	                         }
-	                    ]
-	               	}
+				"page_width_essays": {
+					"label": "Page width",
+					"type":"slider",
+					"min":600,
+					"max":1280,
+					"value":960,
+					"step":10,
+					"suffix":"px",
+					"scope": [ "essays", "essay", "archive.essays" ]
 				}
 			}
 		},
@@ -204,7 +126,7 @@
 					"options": [
 						{ "label": "Image", "value": "image" }
 					],
-					"value": "image"
+					"value": "text"
 				},
 				"site_title_size": {
 					"label": "Size",
@@ -279,25 +201,8 @@
 	                    ]
 	               }
 				},
-				"site_title_weight": {
-					"label": "Weight",
-					"type": "select",
-					"options": [
-						{ "label":"400", "value":"400" },
-						{ "label":"600", "value":"600" }
-					],
-					"value":"400",
-					"dependencies": {
-	                    "evaluate": "all",
-	                    "conditions": [
-	                         {
-	                              "option": "site_title_type",
-	                              "equals": "text"
-	                         }
-	                    ]
-	               }
-				},
-
+				
+				
 				"site_title_img_url": {
 					"label": "Image URL",
 					"type": "string",
@@ -329,91 +234,6 @@
 	                         }
 	                    ]
 	               }
-				}
-			}
-		},
-		"Text": {
-			"icon": "type",
-			"settings": {
-				"show_title": {
-					"label": "Show content title",
-					"type": "boolean",
-					"value": true,
-					"control_first": true,
-					"scope": [ "album" ],
-					"dependencies": {
-	                    "evaluate": "all",
-	                    "conditions": [
-	                         {
-	                              "option": "album_layout",
-	                              "equals": "slideshow"
-	                         }
-	                    ]
-	               	}
-				}
-			}
-		},
-		"Images": {
-			"icon":"img",
-			"settings": {
-				"contents_show_date": {
-					"label": "Show date above images",
-					"type": "boolean",
-					"value": true,
-					"scope": [ "contents" ],
-					"control_first": true,
-					"dependencies": {
-	                    "evaluate": "all",
-	                    "conditions": [
-	                         {
-	                              "option": "contents_layout",
-	                              "equals": "list"
-	                         }
-	                    ]
-	               	}
-				},
-				
-				"contents_link_lbox": {
-					"label": "Link images to lightbox",
-					"type": "boolean",
-					"value": false,
-					"scope": [ "contents" ],
-					"control_first": true
-				}
-			}
-		},
-		"Social": {
-			"icon":"social",
-			"settings": {
-				"social_bttns_show_one": {
-					"label": "Show share buttons",
-					"type": "boolean",
-					"value": true,
-					"control_first": true
-				},
-				"social_bttns_show_two": {
-					"label": "Show like and tweet buttons",
-					"type": "boolean",
-					"value": false,
-					"control_first": true
-				},
-				"social_bttns_offset": {
-					"label": "Offset",
-					"type": "slider",
-					"min": 0,
-					"max": 100,
-					"step": 1,
-					"value": 10,
-					"suffix": "px",
-					"dependencies": {
-						"evaluate": "all",
-						"conditions": [
-							{
-								"option": "social_bttns_show_two",
-								"equals": true
-							}
-						]
-					}
 				}
 			}
 		},
@@ -464,6 +284,27 @@
 					"label": "Nav current color",
 					"type": "color",
 					"control_first": "true"
+				}
+			}
+		},
+		"Discussions": {
+			"icon":"discuss",
+			"settings": {
+				"show_disc_essay": {
+					"label": "Show essay discussions",
+					"note": "Requires a discussion plugin",
+					"type": "boolean",
+					"value": true,
+					"control_first": true,
+					"scope": [ "essay" ]
+				},
+				"show_disc_content": {
+					"label": "Show content discussions",
+					"note": "Requires a discussion plugin",
+					"type": "boolean",
+					"value": true,
+					"control_first": true,
+					"scope": [ "content" ]
 				}
 			}
 		}

@@ -1,0 +1,50 @@
+
+</div>
+	<footer>
+		{{ site.copyright }} 
+  	</footer>
+  
+		<script type="text/javascript">
+		if(window.innerWidth>767){
+			$("article").children().eq(0).css("margin-right","60px");
+		}
+		if(!window.location.href.match(/(main|biography|bio|contact|contacts)/)){
+			$("article").css({
+				"flex-direction":"column",
+				"align-items":"center",
+				"word-break":"break-word",
+			})
+			$("article p").css({
+				"width":"100%",
+				
+			})
+			$(".k-content img").css({
+				
+				
+				"max-heigth":"1000px",
+				"min-height":"520px"
+			})
+			$("k-content-embed").css({
+				
+			})
+		}
+		var grid = $("#grid")
+		
+
+			grid.css("opacity",0)
+		setTimeout(function(){
+		
+		
+		grid.justifiedGallery({
+				rowHeight:550,
+				maxRowHeight:1200,
+				margins:12,
+				captions:false,
+				cssAnimation: true,
+				waitThumbnailsLoad:true,
+		});
+		grid.css("opacity",1)
+		},1500)
+		</script>
+  	</body>
+  </html>

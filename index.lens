@@ -1,5 +1,8 @@
 <koken:include file="layouts/header.html" />
-    <koken:load>
+
+<div id="main-content">
+
+	<koken:load>
         <div id="grid">
     
             <koken:loop>
@@ -16,6 +19,6 @@
         </div>
     </koken:load>
 
-
+</div>
 
 <koken:include file="layouts/footer.html" />
