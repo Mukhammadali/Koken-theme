@@ -8,26 +8,88 @@
 		if(window.innerWidth>767){
 			$("article").children().eq(0).css("margin-right","60px");
 		}
-		if(!window.location.href.match(/(main|biography|bio|contact|contacts)/)){
+		if(window.location.href.match(/(biography|bio)/)){
+			if($("article div") && $("article figure")){
+				$("article").prepend("<div id='text_container'></div>");
+				$("#text_container").append($("article").children("div"))
+			}
+			$("#text_container").css({
+				"display":"flex",
+				"flex":"1"
+			})
+		}
+		if(window.location.href.match(/(main|contact|contacts)/)){
+			if($("article div") && $("article figure")){
+				$("article").append("<div id='text_container'></div>");
+				$("#text_container").append($("article").children("div"))
+			}
+			$("#text_container").css({
+				"display":"flex",
+				"flex":"1"
+			})
+		}
 			$("article").css({
+				opacity:0,
+				"transition":"all 1s ease-in-out"
+			})
+			setTimeout(function(){
+				$("article").css({
+					opacity:1,
+					"transition":"all 1s ease-in-out"
+				})
+			},300)
+		if(!window.location.href.match(/(main|biography|bio|contact|contacts)/)){
+			$("#container").append("<div id='body_content'></div>");
+			$("#body_content").append($("#container article"))
+			
+			$("#body_content").css({
 				"flex-direction":"column",
 				"align-items":"center",
 				"word-break":"break-word",
+				"display":"flex",
+				"justify-content":"center",
+				
 			})
-			$("article p").css({
+			$("article").css({
+				"flex-direction":"column",
+				"max-width":"600px",
+				"justify-content":"center",
+				
+			})
+			$("#body_content p").css({
 				"width":"100%",
-				
+				"word-wrap":"break-word",
+				"max-width":"100%"
 			})
-			$(".k-content img").css({
-				
-				
-				"max-heigth":"1000px",
-				"min-height":"520px"
+			$("#body_content header").css({
+				"margin-right":"0px"
 			})
-			$("k-content-embed").css({
-				
-			})
+				$(".k-content").css({
+					display:"flex",
+					flex:1
+					// "max-heigth":"1000px",
+					// "min-height":"320px"
+				})
+			if(window.innerWidth>767){
+				$(".k-content img").css({
+					// "max-heigth":"1000px",
+					// "min-height":"520px"
+				})
+			}else{
+				$(".k-content img").css({
+					// "max-heigth":"1000px",
+					// "min-height":"320px"
+				})
+				$(".k-content").css({
+					display:"flex",
+					flex:1
+					// "max-heigth":"1000px",
+					// "min-height":"320px"
+				})
+			}
+			
 		}
+
 		var grid = $("#grid")
 		
 
