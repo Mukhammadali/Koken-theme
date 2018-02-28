@@ -18,7 +18,7 @@ koken_title{
 	font-family:'Lato' !important;
 	font-weight:300;
 }
-article,
+
 
 
 a,p,span,div,footer,header,nav,body,figure{
@@ -141,7 +141,6 @@ header.top {
 	display:flex;
 	justify-content:space-between;
 	align-items:flex-end;
-	width:100%;
 	padding:0px 10px;
 }
 
@@ -344,6 +343,8 @@ article {
 	line-height:21px;
 	width:100%;
 	margin:60px 12px;
+	opacity:0;
+	transition:all 1s ease-in-out;
 }
 article p {
 	display:flex;
@@ -593,7 +594,7 @@ div#kdiscuss {
 ================================================== */
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-
+	
 	/*div#container, div.main-content {
 		width:708px !important;
 	}*/
@@ -603,16 +604,32 @@ div#kdiscuss {
 
 /* MOBILE (PORTRAIT/320PX)
 ----------------------------------------------- */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px)  {
 	body{
 		padding:0px 30px;
 	}
+	header.top{
+	padding:0px!important;
+	}
 	nav{
 		display:flex;
+		flex-direction:column;
 		text-align:center;
 		justify-content:center;
 		margin-top:10px;
 	}
+	nav ul{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		opacity:0;
+	}
+	nav ul li{
+		margin-right:0px !important;
+	}
+	
 	/*
 	div#container, div.main-content {
 		width:300px !important;
@@ -635,6 +652,7 @@ div#kdiscuss {
 		-webkit-transform-origin: 50% 50%;
 		transform-origin: 50% 50%;
 		max-width:100%;height:auto;
+		margin-top:10px;
 	}
 
 	article {
@@ -643,7 +661,7 @@ div#kdiscuss {
 		display:flex;
 		flex-direction:column;
 		justify-conter:center;
-		margin:60px 0px;
+		margin:30px 0px;
 	}
 	header.top{
 		display:flex;
@@ -664,16 +682,65 @@ div#kdiscuss {
 
 /* MOBILE (LANDSCAPE/480PX)
 ----------------------------------------------- */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
 
-	div#container, div.main-content {
-		width:460px !important;
+	body{
+		padding:0px 30px;
 	}
+	header.top{
+	padding:0px!important;
+	}
+	nav{
+		display:flex;
+		flex-direction:column;
+		text-align:center;
+		justify-content:center;
+		margin-top:10px;
+	}
+	nav ul{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		opacity:0;
+	}
+	nav ul li{
+		margin-right:0px !important;
+	}
+	
+	/*
+	div#container, div.main-content {
+		width:300px !important;
+	}
+	*/
 	nav a:link, nav a:visited, nav a:active {
-		font-size:18px;
+		font-size:14px;
 		font-weight:300;
 		letter-spacing:1px;
 		text-transform:uppercase;
+	}
+	img.custom_logo {
+		-moz-transform: scale($site_title_img_scale_mobile);
+		-o-transform: scale($site_title_img_scale_mobile);
+		-webkit-transform: scale($site_title_img_scale_mobile);
+		transform: scale($site_title_img_scale_mobile);
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=[$site_title_img_scale_mobile], M12=0, M21=0, M22=[$site_title_img_scale_mobile], SizingMethod='auto expand')";
+		-moz-transform-origin: 50% 50%;
+		-o-transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		max-width:100%;height:auto;
+		margin-top:10px;
+	}
+
+	article {
+
+		width:100%;
+		display:flex;
+		flex-direction:column;
+		justify-conter:center;
+		margin:30px 0px;
 	}
 	header.top{
 		display:flex;
@@ -682,10 +749,12 @@ div#kdiscuss {
 		align-items:center;
 		justify-content:center;
 	}
+
+
 	div.main-content img {
-		max-height:260px;
+		max-height:440px;
 	}
 
-	/*body::before{content: "MOBILE LANDSCAPE";font-weight: bold;display: block;text-align: center;background: rgba(255,255,0, 0.9);position: fixed;top: 0;left: 0;right: 0;z-index: 9999;}*/
+	/*body::before{content: "MOBILE PORTRAIT";font-weight: bold;display: block;text-align: center;background: rgba(255,255,0, 0.9);position: absolute;top: 0;left: 0;right: 0;z-index: 99;}*/
 
 }

@@ -37,72 +37,6 @@
 				}
 			}
 		},
-
-		"Dimensions": {
-			"icon": "dimensions",
-			"settings": {
-				"page_width_index": {
-					"label": "Page width",
-					"type":"slider",
-					"min":600,
-					"max":1280,
-					"value":960,
-					"step":10,
-					"suffix":"px",
-					"scope": [ "index" ]
-				},
-				"page_width_albums": {
-					"label": "Page width",
-					"type":"slider",
-					"min":600,
-					"max":1280,
-					"value":960,
-					"step":10,
-					"suffix":"px",
-					"scope": [ "albums" ]
-				},
-				"page_width_album": {
-					"label": "Page width",
-					"type":"slider",
-					"min":600,
-					"max":1280,
-					"value":960,
-					"step":10,
-					"suffix":"px",
-					"scope": [ "album" ]
-				},
-				"page_width_contents": {
-					"label": "Page width",
-					"type":"slider",
-					"min":600,
-					"max":1280,
-					"value":960,
-					"step":10,
-					"suffix":"px",
-					"scope": [ "contents" ]
-				},
-				"page_width_content": {
-					"label": "Page width",
-					"type":"slider",
-					"min":600,
-					"max":1280,
-					"value":960,
-					"step":10,
-					"suffix":"px",
-					"scope": [ "content" ]
-				},
-				"page_width_essays": {
-					"label": "Page width",
-					"type":"slider",
-					"min":600,
-					"max":1280,
-					"value":960,
-					"step":10,
-					"suffix":"px",
-					"scope": [ "essays", "essay", "archive.essays" ]
-				}
-			}
-		},
 		"Navigation": {
 			"icon": "nav",
 			"settings": {
@@ -126,7 +60,7 @@
 					"options": [
 						{ "label": "Image", "value": "image" }
 					],
-					"value": "text"
+					"value": "image"
 				},
 				"site_title_size": {
 					"label": "Size",
@@ -146,43 +80,7 @@
 	                    ]
 	               }
 				},
-				"site_title_case": {
-					"label": "Transform",
-					"type": "select",
-					"options": [
-						{ "label":"Uppercase", "value":"uppercase" },
-						{ "label":"Lowercase", "value":"lowercase" },
-						{ "label":"Capitalize", "value":"capitalize" },
-						{ "label":"None", "value":"none" }
-					],
-					"value": "uppercase",
-					"dependencies": {
-	                    "evaluate": "all",
-	                    "conditions": [
-	                         {
-	                              "option": "site_title_type",
-	                              "equals": "text"
-	                         }
-	                    ]
-	               }
-				},
-				"site_title_lh": {
-					"label": "Line height",
-					"type": "slider",
-					"min": 1,
-					"max": 4,
-					"step": 0.1,
-					"value": 1.5,
-					"dependencies": {
-	                    "evaluate": "all",
-	                    "conditions": [
-	                         {
-	                              "option": "site_title_type",
-	                              "equals": "text"
-	                         }
-	                    ]
-	               }
-				},
+				
 				"site_title_spacing": {
 					"label": "Spacing",
 					"type": "slider",
@@ -206,7 +104,7 @@
 				"site_title_img_url": {
 					"label": "Image URL",
 					"type": "string",
-					"value": "",
+					"value": "http://www.nevendumont.es/Logo.svg",
 					"dependencies": {
 	                    "evaluate": "all",
 	                    "conditions": [
