@@ -87,7 +87,7 @@
 					"min": 0,
 					"max": 50,
 					"step": 1,
-					"value": 4,
+					"value": 0,
 					"suffix": "px",
 					"dependencies": {
 	                    "evaluate": "all",
@@ -121,7 +121,7 @@
 					"min": 0.1,
 					"max": 1,
 					"step": 0.1,
-					"value": 0.5,
+					"value": 1,
 					"note": "Scale applied to mobile portrait and landscape view",
 					"dependencies": {
 	                    "evaluate": "all",

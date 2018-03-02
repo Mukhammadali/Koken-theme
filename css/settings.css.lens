@@ -141,7 +141,7 @@ header.top {
 	display:flex;
 	justify-content:space-between;
 	align-items:flex-end;
-	padding:0px 10px;
+	padding:20px 10px 10px 10px;
 }
 
 header.top h1 {
@@ -204,7 +204,7 @@ footer.bot {
 	
 }
 footer{
-	padding:0px 10px;
+	padding:0px 10px 25px 10px;
 }
 
 /*
@@ -268,16 +268,17 @@ div.text-content {
 
 div.main-content img {
 	max-height:720px;
-}
+} 
 
 /*
 	ALBUMS / SET
 */
 .k-nav-list li {
-	margin-right:40px;
+	margin-right:20px;
 }
 .k-nav-list li:last-child{
 	margin-right:0px;
+	padding:0px;
 }
 div#sets-layout {
 	margin-bottom:60px;
@@ -305,9 +306,6 @@ div#sets-layout div.item h2 {
 	GRID LAYOUT (CONTENTS/ALBUM)
 */
 
-#grid {
-	margin-bottom:25px;
-}
 
 ul#img-grid {
 	width:100%;
@@ -341,7 +339,7 @@ article {
 	display:flex;
 	font-size:14px;
 	line-height:21px;
-	width:100%;
+	
 	margin:60px 12px;
 	opacity:0;
 	transition:all 1s ease-in-out;
