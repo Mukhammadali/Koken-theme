@@ -65,10 +65,8 @@
 			
 		if(window.location.href.match(/(bio|biography)/)){
 			$(".k-content img").css({
-					"max-height":"700px",
-					"min-height":"500px"
-					// "max-heigth":"1000px",
-					// "min-height":"520px"
+					"max-height":"90vh",
+					"min-height":"300px"
 			})
 		}
 		if(!window.location.href.match(/(main|biography|bio|contact|contacts)/)){
@@ -106,44 +104,34 @@
 				$(".k-content img").css({
 					"max-height":"450px",
 					"min-height":"320px"
-					// "max-heigth":"1000px",
-					// "min-height":"520px"
 				})
 			}else{
 				$(".k-content img").css({
 					"max-height":"450px",
 					"min-height":"320px"
-					// "max-heigth":"1000px",
-					// "min-height":"320px"
 				})
 				$(".k-content").css({
 					display:"flex",
 					flex:1,
 					"max-height":"450px",
 					"min-height":"320px"
-					// "max-heigth":"1000px",
-					// "min-height":"320px"
 				})
 			}
 			
 		}
 
 		var grid = $("#grid")
-		
-
-			grid.css("opacity",0)
+		grid.css("opacity",0)
 		setTimeout(function(){
-		
-		
-		grid.justifiedGallery({
-				rowHeight:550,
-				maxRowHeight:1200,
-				margins:12,
-				captions:false,
-				cssAnimation: true,
-				waitThumbnailsLoad:true,
-		});
-		grid.css("opacity",1)
+			grid.justifiedGallery({
+					rowHeight:550,
+					maxRowHeight:1200,
+					margins:12,
+					captions:false,
+					cssAnimation: true,
+					waitThumbnailsLoad:true,
+			});
+			grid.css("opacity",1)
 		},1500)
 		</script>
   	</body>
