@@ -395,7 +395,7 @@ header time {
 .k-content-embed {
 	display:flex;
 	flex:1;
-	margin-bottom:18px;
+	margin-top:30px;
 }
 
 .k-content {

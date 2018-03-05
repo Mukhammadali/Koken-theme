@@ -38,7 +38,16 @@
 			}
 			$("#text_container").css({
 				"display":"flex",
-				"flex":"1"
+				"flex":"1",
+				// "max-width":"600px"
+			})
+			$("article").css({
+				"flex-direction":"column",
+				"justify-content":"center"
+			})
+			$("#text_container div").css({
+				"margin-right":"0px",
+				width:"100%"
 			})
 		}
 		setTimeout(function(){
@@ -65,7 +74,7 @@
 			
 		if(window.location.href.match(/(bio|biography)/)){
 			$(".k-content img").css({
-					"max-height":"90vh",
+					"max-height":"65vh",
 					// "min-height":"500px"
 			})
 		}
