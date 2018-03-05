@@ -340,9 +340,12 @@ article {
 	font-size:14px;
 	line-height:21px;
 	
-	margin:60px 12px;
+	margin:15px 12px;
 	opacity:0;
 	transition:all 1s ease-in-out;
+}
+#menuBtn{
+	margin-bottom:0px;
 }
 article p {
 	display:flex;
@@ -386,7 +389,9 @@ article blockquote {
 article b, article strong {
 	font-weight:bold;
 }
-
+header time {
+	display:none;
+}
 .k-content-embed {
 	display:flex;
 	flex:1;
@@ -659,7 +664,7 @@ div#kdiscuss {
 		display:flex;
 		flex-direction:column;
 		justify-conter:center;
-		margin:30px 0px;
+		margin:15px 0px;
 	}
 	header.top{
 		display:flex;
