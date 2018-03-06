@@ -5,31 +5,41 @@
   	</footer>
   
 		<script type="text/javascript">
-		if(window.innerWidth>767){
+		if(window.innerWidth>1024){
 			$("article").children().eq(0).css("margin-right","60px");
+			if(window.location.href.match(/(bio|biography)/)){
+			$(".k-content img").css({
+					"max-height":"65vh",
+					
+			})
+		}
 		}
 		if(window.innerWidth<=1024){
 			$("nav").prepend("<p id='menuBtn'>MENU</p>");
-		var dropdown = true;
+			var dropdown = true;
+			
+			$(".k-content").css({
+					display:"flex",
+					flex:1,
+				})
 
-		$("nav ul").slideUp(100);
-		
-		$("#menuBtn").css({
-			display:"block",
-			"font-size":"16px"
-		})
-		$("#menuBtn").on('click',function(){
-			$("nav ul li").eq(0).css({
-				// "margin-top":"20px",
+			$("nav ul").slideUp(100);
+			
+			$("#menuBtn").css({
+				display:"block",
+				"font-size":"16px"
 			})
-			if(dropdown){
-				$("nav ul").slideDown(500);
-				dropdown = false;
-			}else{
-				$("nav ul").slideUp(500);
-				dropdown = true;
-			}
-		})
+			$("#menuBtn").on('click',function(){
+				
+				if(dropdown){
+					$("nav ul").slideDown(500);
+					dropdown = false;
+				}else{
+					$("nav ul").slideUp(500);
+					dropdown = true;
+				}
+			})
+			
 		}
 		if(window.location.href.match(/(biography|bio)/)){
 			if($("article div") && $("article figure")){
@@ -39,7 +49,7 @@
 			$("#text_container").css({
 				"display":"flex",
 				"flex":"1",
-				// "max-width":"600px"
+				
 			})
 			$("article").css({
 				"flex-direction":"column",
@@ -69,13 +79,6 @@
 			$("#text_container").css({
 				"display":"flex",
 				"flex":"1"
-			})
-		}
-			
-		if(window.location.href.match(/(bio|biography)/)){
-			$(".k-content img").css({
-					"max-height":"65vh",
-					// "min-height":"500px"
 			})
 		}
 		if(!window.location.href.match(/(main|biography|bio|contact|contacts)/)){
@@ -109,23 +112,6 @@
 					flex:1,
 					
 				})
-			if(window.innerWidth>1024){
-				$(".k-content img").css({
-					"max-height":"450px",
-					"min-height":"320px"
-				})
-			}else{
-				$(".k-content img").css({
-					"max-height":"450px",
-					"min-height":"320px"
-				})
-				$(".k-content").css({
-					display:"flex",
-					flex:1,
-					"max-height":"450px",
-					"min-height":"320px"
-				})
-			}
 			
 		}
 
