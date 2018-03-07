@@ -607,7 +607,7 @@ div#kdiscuss {
 
 /* MOBILE (PORTRAIT/320PX)
 ----------------------------------------------- */
-@media only screen and (max-width: 767px)  {
+@media only screen and (max-width: 1024px)  {
 	body{
 		padding:0px 30px;
 	}

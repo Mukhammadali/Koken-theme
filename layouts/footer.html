@@ -8,11 +8,11 @@
 		if(window.innerWidth>1024){
 			$("article").children().eq(0).css("margin-right","60px");
 			if(window.location.href.match(/(bio|biography)/)){
-			$(".k-content img").css({
-					"max-height":"65vh",
-					
-			})
-		}
+				$(".k-content img").css({
+						"max-height":"65vh",
+						
+				})
+			}
 		}
 		if(window.innerWidth<=1024){
 			$("nav").prepend("<p id='menuBtn'>MENU</p>");
@@ -27,7 +27,11 @@
 			
 			$("#menuBtn").css({
 				display:"block",
-				"font-size":"16px"
+				"font-size":"16px",
+				"font-weight":"bold",
+			})
+			$("nav ul li").eq(0).css({
+				"margin-top":"13px"
 			})
 			$("#menuBtn").on('click',function(){
 				
@@ -39,6 +43,15 @@
 					dropdown = true;
 				}
 			})
+			if(window.location.href.match(/(bio|biography|main|contact|contacts|blog)/)){
+				$("footer").css({
+					"padding":"0px 0px 25px 0px"
+				})
+				$("body").css({
+					padding:"0px 42px"
+				})
+			}
+			
 			
 		}
 		if(window.location.href.match(/(biography|bio)/)){
