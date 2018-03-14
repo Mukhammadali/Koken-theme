@@ -342,7 +342,7 @@ article {
 	
 	margin:15px 12px;
 	opacity:0;
-	transition:all 1s ease-in-out;
+	
 }
 #menuBtn{
 	margin-bottom:0px;
@@ -609,11 +609,9 @@ div#kdiscuss {
 ----------------------------------------------- */
 @media only screen and (max-width: 1024px)  {
 	body{
-		padding:0px 30px;
+		//padding:0px 30px;
 	}
-	header.top{
-	padding:0px!important;
-	}
+	
 	nav{
 		display:flex;
 		flex-direction:column;
@@ -633,11 +631,7 @@ div#kdiscuss {
 		margin-right:0px !important;
 	}
 	
-	/*
-	div#container, div.main-content {
-		width:300px !important;
-	}
-	*/
+
 	nav a:link, nav a:visited, nav a:active {
 		font-size:14px;
 		font-weight:300;
@@ -660,11 +654,11 @@ div#kdiscuss {
 
 	article {
 
-		width:100%;
+		//width:100%;
 		display:flex;
 		flex-direction:column;
 		justify-conter:center;
-		margin:15px 0px;
+		margin:0px;
 	}
 	header.top{
 		display:flex;
@@ -688,10 +682,10 @@ div#kdiscuss {
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
 
 	body{
-		padding:0px 30px;
+		//padding:0px 30px;
 	}
 	header.top{
-	padding:0px!important;
+	//padding:0px!important;
 	}
 	nav{
 		display:flex;
@@ -743,7 +737,7 @@ div#kdiscuss {
 		display:flex;
 		flex-direction:column;
 		justify-conter:center;
-		margin:30px 0px;
+		//margin:30px 0px;
 	}
 	header.top{
 		display:flex;

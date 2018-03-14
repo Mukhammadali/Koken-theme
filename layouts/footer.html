@@ -15,6 +15,7 @@
 			}
 		}
 		if(window.innerWidth<=1024){
+			
 			$("nav").prepend("<p id='menuBtn'>MENU</p>");
 			var dropdown = true;
 			
@@ -43,14 +44,39 @@
 					dropdown = true;
 				}
 			})
-			if(window.location.href.match(/(bio|biography|main|contact|contacts|blog)/)){
+			if(window.location.href.match(/(blog)/)){
 				$("footer").css({
 					"padding":"0px 0px 25px 0px"
-				})
-				$("body").css({
-					padding:"0px 42px"
+						
 				})
 			}
+			if(window.location.href.match(/(bio|biography|main|contact|contacts|blog)/)){
+				$("footer").css({
+					//"padding":"0px 0px 25px 0px"
+				})
+				$("body").css({
+					padding:"0px 45px"
+				})
+				
+				$("header div.text").css({
+					"width":"100%",
+					display:"flex",
+					"justify-content":"center"
+				})
+				$(".k-content").css({
+					"max-width":"100%"
+				})
+				$(".k-content img").css({
+					"max-width":"100%",
+					"height":"100%"
+				})
+				$("article").css({
+					"padding":"8px 10px"
+				})
+			}
+			$("header").css({
+				"padding-top":"0px"
+			})
 			
 			
 		}
@@ -62,7 +88,6 @@
 			$("#text_container").css({
 				"display":"flex",
 				"flex":"1",
-				
 			})
 			$("article").css({
 				"flex-direction":"column",
@@ -108,7 +133,7 @@
 			})
 			$("article").css({
 				"flex-direction":"column",
-				"max-width":"600px",
+				// "max-width":"600px",
 				"justify-content":"center",
 				
 			})
@@ -134,7 +159,7 @@
 			grid.justifiedGallery({
 					rowHeight:550,
 					maxRowHeight:1200,
-					margins:12,
+					margins:11,
 					captions:false,
 					cssAnimation: true,
 					waitThumbnailsLoad:true,
